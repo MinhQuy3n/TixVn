@@ -1,0 +1,85 @@
+.Information {
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+
+  .Information__container {
+    max-width: 1160px;
+    padding: 150px;
+    margin: auto;
+
+    .Information__content {
+      padding: 50px 30px;
+      background: linear-gradient(
+        to bottom,
+        rgba(20, 50, 93, 0.9),
+        rgba(8, 22, 48, 0.9)
+      );
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
+      border-radius: 6px;
+      color: $textWhite;
+      .ant-form {
+        padding: 0 50px;
+      }
+      .ant-tabs-nav {
+        width: 30%;
+        .ant-tabs-nav-wrap {
+          .ant-tabs-tab {
+            .ant-tabs-tab-btn {
+              color: $textWhite;
+              font-size: _font(h4);
+            }
+          }
+          .ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+              color: $textPrimary !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 992px) {
+  .Information {
+    &__content {
+      flex-direction: column !important;
+      .ant-tabs-nav {
+        width: 100% !important;
+
+        .ant-tabs-nav-list {
+          justify-content: center;
+          flex-direction: row !important;
+        }
+      }
+      .ant-tabs-content-holder {
+        border: none;
+      }
+    }
+  }
+}
+@media screen and(max-width: 792px) {
+  .Information__container {
+    
+    width: 98% !important;
+    padding: 150px 0 !important;
+    .Information__content{
+      padding:50px 10px !important;
+      
+      .ant-tabs-nav-list{
+        overflow-x: scroll !important;
+      }
+      .ant-tabs-content-holder{
+        .ant-tabs-tabpane{
+          padding:0 !important;
+          .ant-form {
+            padding:0;
+          }
+        }
+      }
+    }
+    
+  }
+}

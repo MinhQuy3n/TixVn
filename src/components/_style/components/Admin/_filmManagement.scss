@@ -1,0 +1,34 @@
+.filmManagement {
+  .ant-table-sticky-header {
+    top: 50px !important;
+  }
+  .ant-table-cell {
+    text-align: center;
+    position: relative;
+
+    .trailer,
+    .description {
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    .column__sImages {
+      height: 200px;
+    }
+    .column__detail,
+    .FilmManagement__action {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    img {
+      text-align: center;
+      width: 100%;
+      height: 120px;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.filmblock {
+  &__item {
+    width: 100%;
+    height: 350px;
+    cursor: pointer;
+
+    .film__img_1 {
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      position: relative;
+
+      .overlay {
+        position: absolute;
+        display: none;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to top, #000, transparent 100%);
+        transition: 0.5s;
+      }
+      .rate {
+        text-align: center;
+        width: 60px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color: $white;
+        background-color: rgba(12, 27, 54, 0.8);
+        border: 1px solid #1f2e46;
+        border-radius: 4px;
+        span {
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          font-size: _font(h6);
+          .star {
+            margin-top: -10px;
+            i {
+              font-size: 7px !important;
+              margin: -2px;
+              color: $redOrange;
+            }
+          }
+        }
+      }
+      .flimtype1 {
+        position: absolute;
+        top: -25px;
+        left: -20px;
+        width: 150px;
+        height: auto;
+        overflow: hidden;
+      }
+      .btn-play {
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        display: none;
+      }
+      .btn-play:hover {
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.5;
+      }
+    }
+    .film__detail {
+      .namefilm {
+        font-size: _font(h6);
+        margin-top: 10px;
+        .btn-red {
+          margin-right: 8px;
+          color: $textWhite;
+          @include Button($redOrange, 1px solid transparent, 0 5px, 4px);
+          font-weight: bold;
+        }
+        .btn-green {
+          margin-right: spacing(0.8);
+          color: $textWhite;
+          @include Button($green, 1px solid transparent, 0 5px, 4px);
+          font-weight: bold;
+          margin-left: 5px;
+        }
+      }
+      .infofilm {
+        font-size: _font(body2) + 1px;
+        color: $textGrey;
+        margin: 10px 0 15px 0;
+      }
+    }
+    .buySticker {
+      @include Button(
+        linear-gradient(to left, #fb4226, #ce3017 100%),
+        1px solid transparent,
+        10px,
+        4px
+      );
+      margin-top: 10px;
+      width: 100%;
+      font-size: _font(subtitle);
+      color: $textWhite;
+      display: none;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    #buySticker:hover {
+      background: $redOrange;
+    }
+  }
+  &__item:hover .film__detail {
+    display: none;
+  }
+  &__item:hover .buySticker,
+  &__item:hover .overlay,
+  &__item:hover .btn-play {
+    transition: 0.5s;
+    opacity: 1;
+    display: block;
+  }
+  //
+}
+@media screen and (max-width: 600px) {
+  .filmblock__item {
+    height: 200px;
+
+    .film__img_1 {
+      height: 150px;
+    }
+  }
+}

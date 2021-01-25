@@ -1,0 +1,68 @@
+.fixTop {
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 999;
+  width: 100% !important;
+  background: $black-color !important;
+}
+.header {
+  color: $white;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  transition: 0.5s;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  background: $headingScroll-color;
+  .App-logo {
+    width: 100px;
+    pointer-events: none;
+  }
+  .ant-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block !important;
+    background: transparent;
+    border: none;
+    font-weight: _font(weight-bold);
+
+    .ant-menu-item {
+      border: none !important;
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+    .ant-menu-item-selected,
+    .ant-menu-item-active:hover {
+      a {
+        color: $textWhite;
+      }
+    }
+  }
+  .header_right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    @include vendor("align-items", "center");
+    @include vendor("display", "flex");
+    @include vendor("justify-content", "center");
+
+    .header_right_selectedMenu {
+      border-left: 1px solid $lightGrey-color;
+      margin-left: 0.5rem;
+      .ant-select:focus {
+        outline: none;
+      }
+      .ant-select-selector {
+        border: none !important;
+        background: transparent;
+        color: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.Drawer {
+  .Drawer__btnShow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: $white;
+    border: 1px solid transparent;
+  }
+}
+.ant-drawer {
+  z-index: 9999;
+  .Drawer__top {
+    position: relative;
+    .Drawer__top__btnHide {
+      position: absolute !important;
+      right: 0;
+      padding: 0 !important   ;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}

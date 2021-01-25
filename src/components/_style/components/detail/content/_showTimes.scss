@@ -1,0 +1,50 @@
+.detail__showTimes {
+  .ant-tabs-tab {
+    .ant-tabs-tab-btn {
+      height: 70px !important;
+      line-height: 70px !important;
+    }
+  }
+  .ant-tabs-tab-active {
+    .detail__showtimes__info {
+      color: $textWhite;
+      font-size: _font(h5);
+      transition: 0.5s;
+    }
+  }
+  .detail__showtimes__info {
+    color: $textWhite;
+    font-size: _font(h6);
+    transition: 0.5s;
+    margin-left: 5px;
+  }
+
+  .detail__showtimes__Img {
+    img {
+      width: 50px;
+    }
+  }
+  .detail__showtimes__session {
+    font-weight: _font(weight-bold);
+    background: $light !important;
+    width:150px;
+    border: 1px solid $lightDark-color;
+    padding: 5px 10px;
+    margin:0 20px 20px 0;
+    border-radius:5px;
+    outline:none !important;
+    cursor: pointer;
+
+    .timeStart {
+      font-size: _font(h5);
+      color: $textGreen;
+    }
+    .timeEnd {
+      margin-left: 2px;
+      color: $textGrey;
+    }
+  }
+  .ant-tabs-content-holder{
+      padding-top:30px;
+  }
+}

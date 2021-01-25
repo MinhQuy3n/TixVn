@@ -1,0 +1,20 @@
+.UserManagement {
+  .ant-table-cell {
+    text-align: center;
+  }
+  .ant-table-sticky-header {
+    top: 50px !important;
+  }
+  .UserManagement__action {
+    
+    .UserManagement__action__icon {
+      margin: 0 5px;
+      cursor: pointer;
+      transition: 0.5s;
+      font-size: 20px;
+    }
+    .UserManagement__action__icon:hover {
+      color: red;
+    }
+  }
+}

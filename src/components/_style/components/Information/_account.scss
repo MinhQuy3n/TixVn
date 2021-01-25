@@ -1,0 +1,52 @@
+.Information__content {
+  .information__account__title {
+    text-align: center;
+    font-size: _font(h3);
+    font-weight: _font(weight-bold);
+  }
+  .information__account__btn {
+      display:flex;
+      justify-content: center;
+    button {
+      padding: 10px 90px;
+      cursor: pointer;
+      background: $primary-color;
+      color: $textWhite;
+      border-radius: 5px;
+      border: 1px solid transparent;
+      font-size: _font(h6);
+      font-weight: _font(weight-bold);
+      transition:.5s;
+    }
+    button:hover{
+        opacity: .9;
+    }
+  }
+  .ant-row {
+    flex-direction: column;
+    .ant-form-item-label {
+      text-align: left;
+      label {
+        color: $textWhite;
+        font-size: _font(h5);
+        font-weight: _font(weight-bold);
+        &::after {
+          content: "";
+        }
+      }
+    }
+    .ant-form-item-control {
+      .ant-form-item-control-input-content {
+        input {
+          border: 1px solid transparent;
+          background: transparent;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+          color: $textWhite;
+          &*:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}

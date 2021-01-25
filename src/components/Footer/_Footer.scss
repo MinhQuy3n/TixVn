@@ -1,0 +1,43 @@
+.footer {
+  padding: 20px 15%;
+  background: $footer-color;
+  .ant-col {
+    p {
+      color: $white;
+      font-weight: _font(weight-bold);
+      margin-bottom: 5px;
+    }
+    
+    ul {
+      li {
+        a {
+          text-decoration: none;
+          color: $grey-color;
+          font-size: _font(body2);
+          span {
+            font-size: _font(h4);
+            margin: 10px;
+          }
+        }
+        a:hover{
+            color:$white;
+        }
+      }
+      
+    }
+  }
+  .app,
+  .social {
+    text-align: center;
+  }
+  .icon {
+    font-size: 30px;
+    margin: 0 10px;
+    color: $grey-color;
+  }
+  .footer_copyright{
+      margin-top:60px;
+      padding-top:30px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+  }
+}

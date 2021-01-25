@@ -1,0 +1,25 @@
+.signInAdmin {
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  background: linear-gradient(to right, #1f4685, #021533);
+  .signInAdmin__form {
+    max-width: 560px;
+    padding: 40px 32px 30px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
+    border-radius: 6px;
+    text-align: center;
+    .signInAdmin__header {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+ 
+}

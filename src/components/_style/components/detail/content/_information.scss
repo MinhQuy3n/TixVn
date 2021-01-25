@@ -1,0 +1,51 @@
+.detailMainStyle {
+  margin: 0;
+  color: $textWhite;
+  .film__left {
+    padding-right: 10px;
+    .film__left__info {
+      font-size: _font(subtitle);
+      margin-bottom: 10px;
+      display: flex;
+      .contentTitle {
+        width: 65%;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .contentInfo {
+        width: 35%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .film__right {
+    padding: 0px 10px;
+    font-size: _font(subtitle);
+    .film__right__content {
+      text-align: justify;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .film__left {
+    padding-right: 10px;
+    .film__left__info {
+      .contentTitle {
+        padding: 0 20px;
+        width: 50% !important;
+      }
+      .contentInfo {
+        width: 50% !important;
+        padding: 0 20px;
+
+        justify-content: flex-start !important;
+      }
+    }
+  }
+  .film__right {
+    .film__right__content {
+      max-width: auto;
+    }
+  }
+}

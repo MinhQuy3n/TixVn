@@ -1,0 +1,163 @@
+.detailTop {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  height: 800px;
+
+  .posterLandscapeFilm {
+    filter: blur(15px);
+    width: 100%;
+    height: 130vh;
+  }
+  .overlay {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    height: 100%;
+    background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
+  }
+  .mainMaxWidth {
+    max-width: 870px;
+    float: none;
+    margin: auto;
+    clear: both;
+  }
+
+  .detailmain__info {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 5;
+
+    font-weight: _font(weight-bold);
+
+    .film__poster__top {
+      img {
+        width: 100%;
+      }
+    }
+    .film__poster__detail {
+      color: $textWhite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 0 0 20px;
+      span {
+        font-size: _font(subtitle);
+      }
+      p:nth-child(2) {
+        max-width: 350px;
+        font-size: _font(h4) + 4px;
+        margin-bottom: 10px;
+        word-spacing: 2px;
+        span {
+          font-size: _font(h4);
+          margin-right: 5px;
+          @include Button($redOrange, 1px solid transparent, 0 10px, 4px);
+        }
+      }
+      p:last-child {
+        font-size: _font(subtitle);
+      }
+      .buySticker {
+        @include Button(
+          linear-gradient(to left, #fb4226, #ce3017 100%),
+          1px solid transparent,
+          5px 30px,
+          4px
+        );
+        outline: none;
+        font-size: _font(subtitle);
+        font-weight: _font(weight-bold);
+
+        color: $textWhite;
+
+        cursor: pointer;
+
+        text-decoration: none;
+      }
+      .buySticker:hover {
+        opacity: 0.8;
+        transition: 0.5s;
+      }
+    }
+    .circleStar {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .ant-progress-status-normal {
+        .ant-progress-text {
+          color: $primary-color !important;
+        }
+      }
+    }
+  }
+  .video__trailer {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-20%);
+    z-index: 5;
+    display: none;
+    width: 100%;
+    height: 20vh;
+    iframe {
+      width: 100%;
+    }
+  }
+  .btn__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: none;
+    cursor: pointer;
+    i {
+      color: $textWhite;
+      font-size: _font(h3);
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 798px) {
+  .detailTop {
+    height: 60vh;
+    position: relative;
+    .detailmain__info {
+      .film__poster__top {
+        display: none;
+      }
+      .circleStar {
+        display: none;
+      }
+      .film__poster__detail {
+        position: absolute;
+        top: 100px;
+        .buySticker {
+          display: none;
+        }
+      }
+    }
+    .posterLandscapeFilm {
+      filter: blur(0) !important;
+    }
+    .btn__play {
+      display: block;
+    }
+  }
+}
+@media screen and (min-width: 799px) {
+  .detailTop {
+    .btn__play {
+      display: none;
+    }
+    .video__trailer {
+      display: none !important;
+    }
+  }
+}

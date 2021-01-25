@@ -1,0 +1,16 @@
+.seatList {
+  text-align: center;
+
+  .icon {
+    padding: 3px;
+    font-size: 2rem;
+  }
+}
+@media screen and(max-width:960px) {
+  .seatList {
+    .icon {
+      padding: 3px;
+      font-size: 1.5rem;
+    }
+  }
+}

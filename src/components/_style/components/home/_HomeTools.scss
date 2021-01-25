@@ -1,0 +1,36 @@
+.homeTool {
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  background: $white;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  width: 950px;
+  box-shadow: 0px 0px 4px 1px _palette(fg-bold) !important;
+  padding: 20px 10px !important;
+
+  .homeTool_item {
+    .ant-select-selector {
+      border: none !important;
+      outline: 0;
+    }
+  }
+  .homeTool__btnBuy {
+    width: 20%;
+    margin-left: 30px;
+    background: $grey-color;
+    border: none !important  ;
+    line-height: 0;
+    // padding: 20px 60px;
+  }
+}
+
+.swal2-backdrop-show {
+  .swal2-actions{
+    border-top : 1px solid #efe9e9 !important;
+    .swal2-confirm{
+      margin-top:10px;
+      background: $primary-color !important;  
+    }
+  }
+}

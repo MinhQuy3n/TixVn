@@ -1,0 +1,132 @@
+.ant-tabs-nav-list {
+  .ant-tabs-tab-active {
+    opacity: 0.5;
+  }
+  .ant-tabs-ink-bar {
+    display: none !important;
+  }
+}
+.ant-tabs-left {
+  .ant-tabs-nav {
+    width: 50%;
+    .ant-tabs-tab {
+      opacity: 0.5;
+      .ant-tabs-tab-btn {
+        display: flex;
+        .cinemaBlock__Img {
+          width: 50px;
+          img {
+            width: 100%;
+          }
+        }
+        .cinemaBlock__info {
+          margin-left: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: baseline;
+          p {
+            margin: 0;
+          }
+          .cinemaBlock__address {
+            white-space: nowrap;
+            width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: _font(body2);
+            text-align: left;
+          }
+        }
+      }
+    }
+    .ant-tabs-tab:hover {
+      opacity: 1 !important;
+      transition: 0.5s;
+      color: #000000d9 !important;
+    }
+    .ant-tabs-tab-active {
+      opacity: 1 !important;
+
+      .ant-tabs-tab-btn {
+        color: #000000d9 !important;
+      }
+    }
+  }
+}
+.ant-collapse {
+  background: transparent;
+  border: none !important;
+
+  .ant-collapse-item {
+    border-bottom: 1px solid $lightGrey-color;
+    .cinemaBlock__listFilm {
+      display: flex;
+      .cinemaBlock__listFilm_img {
+        width: 50px;
+        height: 50px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .cinemaBlock__listFilm_info {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .tagFilm {
+          padding: 2px 8px;
+          background: $primary-color;
+          color: $textWhite;
+          border-radius: 5px;
+          font-weight: _font(weight-bold);
+        }
+        .cinemaBlock__listFilm_name {
+          margin-left: 5px;
+          font-weight: _font(weight-bold);
+        }
+        .time {
+          font-size: _font(body2);
+          margin: 0;
+          color: $textGrey;
+        }
+      }
+    }
+    .ant-collapse-content {
+      border: none !important;
+
+      .ant-collapse-content-box {
+        // display: flex;
+        // justify-content: flex-start;
+        .cinemaBlock__listFilm_session {
+          font-weight: _font(weight-bold);
+          background: $light !important;
+
+          border: 1px solid $lightDark-color;
+          padding: 5px 10px;
+          margin:0 5px 10px 0;
+          border-radius:5px;
+          outline:none !important;
+          cursor: pointer;
+
+          .timeStart {
+            font-size: _font(h5);
+            color: $textGreen;
+          }
+          .timeEnd {
+            margin-left: 2px;
+            color: $textGrey;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width : 578px) {
+  .ant-tabs-nav {
+    width: 100% !important;
+    .ant-tabs-tab {
+      justify-content: center;
+    }
+  }
+}

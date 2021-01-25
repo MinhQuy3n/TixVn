@@ -1,0 +1,24 @@
+.slick-dots {
+  margin: 0 !important;
+  position: absolute !important;
+  bottom: 50px !important;
+  button:before {
+    content: "" !important;
+  }
+  li {
+    width: 30px !important;
+  }
+
+  .slick-active {
+    button {
+      background: $primary-color !important;
+    }
+  }
+}
+.Slider__img {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}

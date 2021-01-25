@@ -1,0 +1,180 @@
+//-----COLORS BACKGROUND------
+$primary-color: #fb4226; // primary color for all components
+$link-color: #1890ff; // link color
+$success-color: #52c41a; // success state color
+$warning-color: #faad14; // warning state color
+$error-color: #f5222d; // error state color
+$secondary: #f2f3f5;
+$white: #ffffff;
+$light: #fbfbf7;
+$lightDark-color: #dedfe0;
+$darkGrey: #4a4a4a;
+$grey-color: #949494;
+$lightGrey-color: #f3f3f3;
+$redOrange: #fb4226;
+$green: #00ac4d;
+//-----COLORS TEXT------
+$textPrimary: #fb4226;
+$textSecondary: #0f7c90;
+$textWhite: #ffffff;
+$colorWhiteDark: #e9e9e9;
+$textGrey: #949494;
+$textLightGrey: #9b9b9b;
+$textDarkGrey: #505763;
+$textRedLight: #ff6e58;
+$textGreen: #00ac4d;
+$textGreenLight: #91d25a;
+$black-color: #000000;
+
+$heading-color: rgba(0, 0, 0, 0.5); // heading text color
+$headingScroll-color: rgba(0, 0, 0, 0.85); // heading text color
+$footer-color: #222;
+$text-color: rgba(0, 0, 0, 0.65); // major text color
+$text-color-secondary: rgba(0, 0, 0, 0.45); // secondary text color
+$disabled-color: rgba(0, 0, 0, 0.25); // disable state color
+$border-radius-base: 2px; // major border radius
+$border-color-base: #d9d9d9; // major border color
+$box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+  0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05); // major shadow for layers
+
+//Brand color
+.colorCGV {
+  color: #ff0000;
+}
+.colorBHDStar {
+  color: #8bc541;
+}
+.colorGalaxy {
+  color: #f60;
+}
+.colorCineStar {
+  color: #df0d7a;
+}
+.colorDDC {
+  color: #9c9c9c;
+}
+.colorMegaGS {
+  color: #e5a813;
+}
+.colorLotteCinima {
+  color: #ca4137;
+}
+
+// // Breakpoints
+// $breakpoints-default: 1681px;
+// $breakpoints-xlarge: 1281px;
+// $breakpoints-large: 981px;
+// $breakpoints-medium: 737px;
+// $breakpoints-small: 481px;
+// $breakpoints-xsmall: 361px;
+
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/vendor";
+@import "libs/breakpoints";
+@import "libs/grid";
+@import "libs/flexgrid";
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600");
+
+/*
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+// Breakpoints.
+@include breakpoints(
+  (
+    default: (
+      1681px,
+      null,
+    ),
+    xlarge: (
+      1281px,
+      1680px,
+    ),
+    large: (
+      981px,
+      1280px,
+    ),
+    medium: (
+      737px,
+      980px,
+    ),
+    small: (
+      481px,
+      736px,
+    ),
+    xsmall: (
+      361px,
+      480px,
+    ),
+    xxsmall: (
+      null,
+      360px,
+    ),
+  )
+);
+
+// Color.
+@mixin color($p) {
+  @include color-typography($p);
+  @include color-button($p);
+  @include color-form($p);
+  @include color-list($p);
+  @include color-table($p);
+  @include color-highlights($p);
+  @include color-testimonials($p);
+}
+
+// Base.
+@import "base/page";
+@import "base/reset";
+@import "base/typography";
+
+//Component
+//Home
+@import "../components/_style/components/home/UserLogin";
+@import "../components/_style/components/home/Drawer";
+@import "../components/_style/components/home/Slider";
+@import "../components/_style/components/home/HomeTools";
+@import "../components/Header/Header";
+@import "../components/_style/components/home/film/filmBlock";
+@import "../components/_style/components/home/film//FilmCard";
+@import "../components/_style/components/home/AppBlock";
+@import "../components/Footer/Footer";
+@import "../components/_style/components/home/CinemBlock";
+
+//Detail
+@import "../components/_style/components/detail/detailTop";
+@import "../components/_style/components/detail/detailContent";
+@import "../components/_style/components/detail/content/showTimes";
+@import "../components/_style/components/detail/content/information";
+@import "../components/_style/components/detail/content/evaluate";
+
+// CheckOut
+
+@import "../components/_style/components/checkOut/leftCheckOut";
+@import "../components/_style/components/checkOut/seatList/seatItem";
+@import "../components/_style/components/checkOut/rightCheckOut";
+
+// Information
+
+@import "../components/_style/components/Information/account";
+@import "../components/_style/components/Information/changePass";
+@import "../components/_style/components/Information/historybooked";
+
+//Admin
+@import "../components/_style/components/Admin/userManagement";
+@import "../components/_style/components/Admin/modal";
+@import "../components/_style/components/Admin/filmManagement";
+
+//Pages
+@import "../pages/Home/Home";
+@import "../pages/Signin/Signin";
+@import "../pages/Detail/detail";
+@import "../pages/CheckOut/checkOut";
+@import "../pages/Information/Information";
+@import "../pages/admin/admin";
+@import "../pages/admin/signin/signinAdmin";

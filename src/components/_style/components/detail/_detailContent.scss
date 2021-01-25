@@ -1,0 +1,20 @@
+.max-width {
+  max-width: 870px;
+  margin: auto;
+  clear: both;
+}
+.detailContent {
+  position: relative;
+  margin-top: -140px !important;
+  
+  .ant-tabs-tab-btn {
+    color: $textWhite;
+    height: auto;
+  }
+  
+}
+@media screen and (max-width: 798px){
+  .detailContent{
+    margin-top :0 !important;
+  }
+}

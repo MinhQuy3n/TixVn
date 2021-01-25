@@ -1,0 +1,148 @@
+.seatCheckOut {
+  text-align: center;
+  padding: 10% 5% 0 5% !important;
+  width: 100%;
+  .seatList__screen {
+    background: $grey-color;
+    margin-bottom: 10px;
+  }
+
+  .topContent {
+    display: flex;
+    justify-content: space-between;
+    .leftTitle {
+      display: flex;
+      align-items: center;
+      .logoCinema {
+        width: 50px;
+        margin-right: 13px;
+        img {
+          width: 100%;
+        }
+      }
+      .contentcinema {
+        display: flex;
+        flex-direction: column;
+        p {
+          margin: 0;
+        }
+        .address {
+          font-size: _font(subtitle);
+          float: left;
+          display: flex;
+          justify-content: flex-start;
+        }
+        .hour {
+          color: $textGrey;
+          font-size: _font(subtitle);
+        }
+      }
+    }
+    .rightTitle {
+      .ant-statistic-title {
+        font-size: _font(body1) !important;
+        margin: 0;
+      }
+      .ant-statistic-content {
+        color: $textPrimary;
+      }
+    }
+  }
+  .seatList{
+    padding: 20px;
+  }
+}
+.leftCheckOut {
+  position: relative;
+  .seatCheckOut__navTop {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    background: $white;
+    width: 75%;
+    position: fixed;
+    box-shadow: -5px 2px 35px -11px #555555 !important;
+    .leftStep {
+      width: 75%;
+      ul {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        line-height: 2;
+        pointer-events: none;
+        li {
+          list-style-type: none;
+          padding: 20px 0;
+          margin-right: 20px;
+          font-size: _font(body2);
+          display: inline-block;
+          .stepNumber {
+            font-size: _font(h5);
+            margin-right: 10px;
+          }
+        }
+        .active {
+          position: relative;
+          color: $textPrimary;
+          .stepNumbernt {
+            font-size: _font(h5);
+          }
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100%;
+            border: 1px solid $textPrimary;
+          }
+        }
+      }
+    }
+    .navTop__user {
+      cursor: pointer;
+      width: 25%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .navTop__user__name {
+        margin-left: 5px;
+        display: flex;
+        align-items: center;
+        font-size: _font(body2);
+      }
+    }
+  }
+}
+@media screen and(max-width: 788px) {
+  .leftCheckOut {
+    .seatCheckOut__navTop {
+      display: flex;
+      align-items: center;
+      padding: 10px !important;
+    }
+  }
+}
+@media screen and(max-width: 767px) {
+  .leftCheckOut {
+    .seatCheckOut__navTop {
+      justify-content: space-between;
+      width: 100%;
+      .seatCheckOut__navTop__title,
+      .icon__close,
+      .navTop__user {
+        width: 33.3333%;
+      }
+      .icon__close {
+        float: left;
+      }
+      .navTop__user {
+        padding-right: 20px;
+      }
+    }
+    .seatList {
+      max-height: 300px;
+      overflow-y: scroll;
+      overflow-x: scroll;
+
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.appblock {
+  width: 100%;
+  background: url("../../../../asset/Images/backapp.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 120px 80px;
+  background-attachment: fixed;
+  .homeapp {
+    color: $textWhite;
+    .homeapp__detail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p:first-child {
+        font-size: xx-large;
+        font-weight: _font(weight-bold);
+        margin-bottom: 30px;
+      }
+      p:nth-child(2) {
+        font-size: _font(h6);
+        margin: 0 2rem 2rem 3rem;
+      }
+      .btn__App {
+        width: 300px;
+        text-align: center;
+        cursor: pointer;
+        @include Button($redOrange, 1px solid transparent, 10px 20px, 4px);
+      }
+      p:last-child {
+        margin-top: 20px;
+        font-size: _font(subtitle);
+        span {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    // .homeapp__app {
+    //   // display: none;
+    // }
+  }
+  
+}
+@media screen and (min-width: 993px) {
+  .homeapp {
+    display: flex;
+    justify-content: center;
+    .homeapp__detail {
+      p:first-child {
+        max-width: 505px;
+      }
+    }
+    .homeapp__app {
+      width: 65%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      max-height: 400px;
+    }
+  }
+}
+@media screen and (max-width: 993px) {
+  .appblock {
+    padding: 80px 10px;
+  }
+  .homeapp__detail {
+    p {
+      text-align: center !important;
+      
+    }
+    p:first-child {
+      font-size:30px !important;
+    }
+  }
+}
